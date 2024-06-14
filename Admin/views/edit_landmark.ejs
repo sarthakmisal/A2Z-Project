@@ -1,0 +1,66 @@
+<%- include('layouts/header.ejs') %>
+<div class="container p-5">
+  <div class="row m-5">
+    <div class="col-md-12">
+      <form
+        action="/update_landmark/<%=landmark[0].id%>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-dark text-center">Update Landmarks</h1>
+            <br />
+          </div>
+          <div class="col-md-6">
+            Slider Title
+            <input
+              type="text"
+              hidden
+              name="image"
+              value="<%=landmark[0].image%>"
+            />
+            <input
+              value="<%= landmark[0].title%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="title"
+            />
+          </div>
+          <div class="col-md-6">
+            Select Image
+            <input
+              required
+              class="form-control bg-white"
+              type="file"
+              name="logo"
+            />
+          </div>
+          <div class="col-md-12">
+            Description
+            <textarea
+              required
+              class="form-control bg-white"
+              name="description"
+            >
+<%= landmark[0].description %></textarea
+            >
+          </div>
+          <div class="col-md-12 d-flex">
+            <button class="btn mx-auto my-3 text-white btn-info">Submit</button>
+          </div>
+          <div class="col-md-12 d-flex my-5">
+            <img
+              src="/uploads/<%=landmark[0].image%>"
+              width="300vw"
+              class="mx-auto"
+              alt="Not Found"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('layouts/footer.ejs') %>

@@ -1,0 +1,26 @@
+.sliderabc{
+  overflow-x: hidden;
+}
+.xyzb{
+  height: 250px;
+}
+  .logos {
+    display: flex;
+    animation: slide 8s linear infinite;
+  }
+  
+  .logos img {
+    margin: 0 100px;
+  }
+  .sliderabc{
+    height: 150px;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+  }
+  

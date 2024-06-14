@@ -1,0 +1,35 @@
+<%- include('layouts/header.ejs') %>
+    <div class="container p-5">
+        <div class="row m-5">
+            <div class="col-md-12">
+                <table class="table table-hovered table-stripped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% sliders.forEach((element,sn)=>{   %>
+                            <tr>
+                                <td><%=sn+1%></td>
+                                <td><%= element.slider_title %></td>
+                                <td><%= element.type %></td>
+                                <td><%= element.slider_description %></td>
+                                <td><%= element.slider_image %></td>
+                                <td><a href="/edit_slider/<%=element.slider_id %>">
+                                    <span class="bg-secondary px-3 rounded roun text-white">change</span></td>
+                                    </a>
+                            </tr>
+                       <% }) %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <%- include('layouts/footer.ejs') %>

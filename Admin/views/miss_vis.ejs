@@ -1,0 +1,55 @@
+<%- include('layouts/header.ejs')%>
+
+<form action="/save_miss_vis" method="post" enctype="multipart/form-data" class="p-5">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Add New About</h1>
+            </div>
+            <div class="col-6 mt-5">
+                Mission :
+                 <input type="text" name="about_miss" class="form-control bg-white">
+             </div>
+            <div class="col-6 mt-5">
+               Vision :
+                <input type="text" name="about_vis" class="form-control bg-white">
+            </div>
+           <div class="col-12 text-center mt-5">
+               <button class="btn btn-info btn-lg text-white">Save</button>
+            </div>
+           
+        </div>
+    </div>
+</form>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-sm text-center">
+                <tr>
+                <th class="pt-4 pb-3 ps-3">ACTION</th>
+                <th class="pt-4 pb-3 ps-3">SR.NO</th>
+                <th class="pt-4 pb-3 ps-3">ABOUT_MISSION</th>
+                <th class="pt-4 pb-3 ps-3">ABOUT_VISION</th>
+                </tr>
+
+                <% for (var i=0;i<miss_vis.length;i++) { %>
+                    <tr>
+                        <td>
+                           <a href="/edit_miss_vis/<%=miss_vis[i].miss_vis_id%>"><button class="btn btn-primary"><i class="fa fa-pen"></i></button></a>
+                           <a href="/delete_miss_vis/<%=miss_vis[i].miss_vis_id%>"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
+                        </td>
+                        <td><%=i+1%></td>
+                        
+                        <td><%=miss_vis[i].about_miss%></td>
+                        <td><%=miss_vis[i].about_vis%></td>
+                    </tr>
+
+                    <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+<%- include('layouts/footer.ejs')%>
+
+

@@ -1,0 +1,31 @@
+<%- include('layouts/header.ejs')%>
+
+
+<form action="/update_about_slider" method="post" enctype="multipart/form-data" class="p-5">
+    <input type="hidden" name="about_slider_id" value="<%=about_slider_info[0].about_slider_id%>">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Update New About</h1>
+            </div>
+            <div class="col-6 mt-5">
+                Slider Image :
+                <input type="file" name="about_slider_img" class="form-control">
+                <img src="/uploads/<%=about_slider_info[0].about_slider_img%>" width="100px"> 
+                </div>
+            <div class="col-6 mt-5">
+              Slider Heading :
+                <input type="text" name="about_slider_heading" value="<%=about_slider_info[0].about_slider_heading%>" class="form-control bg-white">
+            </div>
+            <div class="col-12 mt-5">
+                Slider Description :
+                  <input type="text" name="about_slider_desc" value="<%=about_slider_info[0].about_slider_desc%>" class="form-control bg-white">
+              </div>
+           <div class="col-12 text-center mt-5">
+               <button class="btn btn-info btn-lg text-white">Save</button>
+            </div>
+           
+        </div>
+    </div>
+</form>
+<%- include('layouts/footer.ejs')%>

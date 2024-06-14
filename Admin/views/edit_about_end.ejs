@@ -1,0 +1,23 @@
+<%- include('layouts/header.ejs')%>
+
+
+<form action="/update_about_end" method="post" enctype="multipart/form-data" class="p-5">
+    <input type="hidden" name="company_id" value="<%=img_info[0].company_id%>">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Update New About</h1>
+            </div>
+            <div class="col-12 mt-5">
+                Image :
+                <input type="file" name="img" class="form-control">
+                <img src="/uploads/<%=img_info[0].img%>" width="100px"> 
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <button class="btn btn-info btn-lg text-white">Save</button>
+                 </div>
+           
+    </div>
+</form>
+<%- include('layouts/footer.ejs')%>

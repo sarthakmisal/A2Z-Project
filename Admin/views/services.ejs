@@ -1,0 +1,34 @@
+<%- include('layouts/header.ejs') %>
+    <div class="container p-5">
+        <div class="row m-5">
+            <div class="col-md-12">
+                <h1 class="text-dark text-center">Services</h1>
+            </div>
+            <div class="col-md-12">
+                <table class="table table-hovered table-stripped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% services.forEach((element,sn)=>{   %>
+                            <tr>
+                                <td><%=sn+1%></td>
+                                <td><%= element.title %></td>
+                                <td><%= element.image %></td>
+                                <td><a href="/edit_services/<%=element.id %>">
+                                    <span class="bg-secondary px-3 rounded roun text-white">change</span></td>
+                                    </a>
+                            </tr>
+                       <% }) %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <%- include('layouts/footer.ejs') %>

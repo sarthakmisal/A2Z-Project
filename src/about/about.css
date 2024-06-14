@@ -1,0 +1,52 @@
+/* Slider Container */
+.slider-container {
+    background-color: #000;
+  }
+  
+  /* Slider Row */
+  .slider-row {
+    padding-top: 50px; /* Adjust as needed */
+  }
+  
+  /* Slider Image Column */
+  .slider-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Slider Image */
+  .slider-image {
+    max-width: 100%;
+    opacity: 0.5;
+  }
+  
+  /* Slider Content Column */
+  .slider-content-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Slider Content */
+  .slider-content {
+    text-align: center;
+  }
+  
+  /* Slider Heading */
+  .slider-heading {
+    color: #fff;
+  }
+  
+  /* Slider Title */
+  .slider-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Slider Description */
+  .slider-description {
+    color: #fff;
+    font-size: 1.2rem;
+  }

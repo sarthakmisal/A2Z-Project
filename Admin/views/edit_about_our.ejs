@@ -1,0 +1,26 @@
+<%- include('layouts/header.ejs')%>
+
+
+<form action="/update_about_our" method="post" enctype="multipart/form-data" class="p-5">
+    <input type="hidden" name="about_our_id" value="<%=about_our_info[0].about_our_id%>">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Update New About</h1>
+            </div>
+            <div class="col-6 mt-5">
+                Our HEADING :
+                 <input type="text" name="about_our_heading" value="<%=about_our_info[0].about_our_heading%>" class="form-control bg-white">
+             </div>
+            <div class="col-6 mt-5">
+                Our Description :
+                <input type="text" name="about_our_desc" value="<%=about_our_info[0].about_our_desc%>" class="form-control bg-white">
+            </div>
+           <div class="col-12 text-center mt-5">
+               <button class="btn btn-info btn-lg text-white">Save</button>
+            </div>
+           
+        </div>
+    </div>
+</form>
+<%- include('layouts/footer.ejs')%>

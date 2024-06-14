@@ -1,0 +1,63 @@
+<%- include('layouts/header.ejs')%>
+
+<form action="/save_about_client" method="post" enctype="multipart/form-data" class="p-5">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Add New Client</h1>
+            </div>
+            <div class="col-12 mt-5">
+                Client Info :
+                 <input type="text" name="client_info" class="form-control bg-white">
+             </div>
+            <div class="col-6 mt-5">
+               client Name :
+                <input type="text" name="client_name" class="form-control bg-white">
+            </div>
+            <div class="col-6 mt-5">
+                client Position :
+                 <input type="text" name="client_pos" class="form-control bg-white">
+             </div>
+           <div class="col-12 text-center mt-5">
+               <button class="btn btn-info btn-lg text-white">Save</button>
+            </div>
+           
+        </div>
+    </div>
+</form>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-sm text-center">
+                <tr>
+                <th class="pt-4 pb-3 ps-3">ACTION</th>
+                <th class="pt-4 pb-3 ps-3">SR.NO</th>
+                <th class="pt-4 pb-3 ps-3">CLIENT INFO</th>
+                <th class="pt-4 pb-3 ps-3">CLIENT NAME</th>
+                <th class="pt-4 pb-3 ps-3">CLIENT POS</th>
+
+                </tr>
+
+                <% for (var i=0;i<our_client.length;i++) { %>
+                    <tr>
+                        <td>
+                           <a href="/edit_our_client/<%=our_client[i].client_id%>"><button class="btn btn-primary"><i class="fa fa-pen"></i></button></a>
+                           <a href="/delete_our_client/<%=our_client[i].client_id%>"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
+                        </td>
+                        <td><%=i+1%></td>
+                        
+                        <td><%=our_client[i].client_info%></td>
+                        <td><%=our_client[i].client_name%></td>
+                        <td><%=our_client[i].client_pos%></td>
+
+                    </tr>
+
+                    <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer.ejs')%>

@@ -1,0 +1,61 @@
+<%- include('layouts/header.ejs')%>
+<form action="/save_about_slider" method="post" enctype="multipart/form-data" class="p-5">
+    <div class="container bg-white text-dark">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-5 text-dark">Add New About</h1>
+            </div>
+            <div class="col-6 mt-5">
+                Slider Image :
+                 <input type="file" name="about_slider_img" class="form-control bg-white">
+             </div>
+            <div class="col-6 mt-5">
+               Slider Heading :
+                <input type="text" name="about_slider_heading" class="form-control bg-white">
+            </div>
+            <div class="col-12 mt-5">
+                 Slider Description :
+                 <br>               
+                 <input type="text"  name="about_slider_desc" class="form-control bg-white">
+            </div>
+            <div class="col-12 text-center mt-5">
+               <button class="btn btn-info btn-lg text-white">Save</button>
+            </div>
+           
+        </div>
+    </div>
+</form>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-sm text-center">
+                <tr>
+                <th class="pt-4 pb-3 ps-3">ACTION</th>
+                <th class="pt-4 pb-3 ps-3">SR.NO</th>
+                <th class="pt-4 pb-3 ps-3">SLIDER IMAGE</th>
+                <th class="pt-4 pb-3 ps-3">SLIDER HEADING</th>
+                <th class="pt-4 pb-3 ps-3">SLIDER DESCRIPTION</th>
+
+                </tr>
+
+                <% for (var i=0;i<about_slider.length;i++) { %>
+                    <tr>
+                        <td>
+                           <a href="/edit_about_slider/<%=about_slider[i].about_slider_id%>"><button class="btn btn-primary"><i class="fa fa-pen"></i></button></a>
+                           <a href="/delete_about_slider/<%=about_slider[i].about_slider_id%>"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
+                        </td>
+                        <td><%=i+1%></td>
+                        
+                        <td><%=about_slider[i].about_slider_img%></td>
+                        <td><%=about_slider[i].about_slider_heading%></td>
+                        <td><%=about_slider[i].about_slider_desc%></td>
+
+                    </tr>
+
+                    <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+<%- include('layouts/footer.ejs')%>

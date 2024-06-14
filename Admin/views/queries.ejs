@@ -1,0 +1,50 @@
+<%- include('layouts/header.ejs') %>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-dark text-center">Pending Queries</h1>
+            </div>
+            <div class="col-md-12">
+                <table width="100%" class="table table-stripped table-hovered table-bordered">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(i=0;i<data.length;i++){%>
+                            <tr>
+                                <td>
+                                    <%= i+1 %>
+                                </td>
+                                <td>
+                                    <%= data[i].name %>
+                                </td>
+                                <td>
+                                    <%= data[i].email %>
+                                </td>
+                                <td>
+                                    <%= data[i].subject %>
+                                </td>
+                                <td>
+                                    <%= data[i].message %>
+                                </td>
+                                <td>
+                                    <a href="/resolve_query/<%=data[i].id%>">
+                                        <span class="text-success cursor-pointer font-weight-bold"><button class="btn btn-info">Delete</button></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/footer.ejs') %>

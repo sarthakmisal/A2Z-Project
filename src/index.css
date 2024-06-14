@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.color{
+  color: rgb(226, 7, 7) !important;
+}
+.bg-color{
+  color: white !important;
+  background: rgb(204,58,241) !important;
+  background: linear-gradient(20deg, rgba(204,58,241,1) 16%, rgba(232,27,109,1) 50%, rgba(247,7,32,1) 92%) !important;
+}
+
+
+.xyzimage{
+  width: 100%;
+  filter: contrast(170%) hue-rotate(130deg);
+}
+
+
+.title{
+  text-shadow: 5px 5px black !important;
+}
+.type{
+  text-shadow: 5px 5px black !important;
+}
+.description{
+  text-shadow: 5px 5px black !important;
+}

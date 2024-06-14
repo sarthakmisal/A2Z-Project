@@ -1,0 +1,14 @@
+.color {
+    color: #f39c12; /* Example color, adjust as needed */
+  }
+  
+  .xyzimage {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .xyzimage:hover {
+    transform: scale(1.1);
+  }
+  

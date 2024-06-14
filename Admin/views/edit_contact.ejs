@@ -1,0 +1,131 @@
+<%- include('layouts/header.ejs') %>
+<div class="container p-5">
+  <div class="row m-5">
+    <div class="col-md-12">
+      <form
+        action="/update_contact/<%=contact[0].id%>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-dark text-center">Update Contact</h1>
+            <br />
+          </div>
+          <div class="my-1 col-md-4">
+            Title
+            <input
+              value="<%= contact[0].title%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="title"
+            />
+          </div>
+          <div class="my-1 col-md-4">
+            Dialogue
+            <input
+              value="<%= contact[0].dialogue%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="dialogue"
+            />
+          </div>
+<div class="my-1 col-md-4">
+            Phone
+            <input
+              value="<%= contact[0].phone %>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="phone"
+            />
+          </div>
+          <div class="my-1 col-md-12">
+            Description
+            <textarea required class="form-control bg-white" name="description">
+<%= contact[0].description %></textarea
+            >
+          </div>
+          <div class="my-1 col-md-6">
+            Address
+            <input
+              value="<%= contact[0].address%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="address"
+            />
+          </div>
+          <div class="my-1 col-md-6">
+            Map Embed Link
+            <input
+              value="<%= contact[0].map%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="map"
+            />
+          </div>
+          
+          <div class="my-1 col-md-6">
+            Link
+            <input
+              value="<%= contact[0].link%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="link"
+            />
+          </div>
+          <div class="my-1 col-md-6">
+            Email
+            <input
+              value="<%= contact[0].email%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="email"
+            />
+          </div>
+          <div class="my-1 col-md-4">
+            Quote1
+            <input
+              value="<%= contact[0].quote1%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="quote1"
+            />
+          </div>
+          <div class="my-1 col-md-4">
+            Quote2
+            <input
+              value="<%= contact[0].quote2%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="quote2"
+            />
+          </div>
+          <div class="my-1 col-md-4">
+            Quote3
+            <input
+              value="<%= contact[0].quote3%>"
+              required
+              class="form-control bg-white"
+              type="text"
+              name="quote3"
+            />
+          </div>
+          
+          <div class="col-md-12 d-flex">
+            <button class="btn mx-auto my-3 text-white btn-info">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('layouts/footer.ejs') %>

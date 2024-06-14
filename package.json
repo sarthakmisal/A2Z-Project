@@ -1,17 +1,30 @@
 {
+  "homepage": "http://sarthakmisal.github.io/react-gh-pages",
   "name": "a2zproject",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "http-proxy-middleware": "^3.0.0",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-swiper": "^0.1.5",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +47,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
+
+
+
+
+git init
+git remote add origin https://github.com/sarthakmisal/react-gh-pages.git
+npm run deploy
+git add .
+git commit -m "Added A2Z to GitHub Pages"
+git push origin master

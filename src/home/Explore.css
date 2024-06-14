@@ -1,0 +1,37 @@
+/* Explore.css */
+.explore-col-2 {
+  background-color: #e9ecef;
+  box-shadow: 0px 0px 1px 1px rgba(255, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.hovereffecttext {
+  transform: translateY(60px);
+  visibility: hidden;
+}
+
+.hovereffect:hover .hovereffecttext {
+  transition-duration: 1s;
+  visibility: visible;
+  background-color: black;
+  color: white;
+  transform: translateY(5px);
+}
+
+@media (max-width: 768px) {
+  .explore-col-2 {
+    width: 100%;
+  }
+  .hovereffecttext {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .explore-col-2 {
+    margin: 1rem 0;
+  }
+  .hovereffecttext {
+    font-size: 0.8rem;
+  }
+}
