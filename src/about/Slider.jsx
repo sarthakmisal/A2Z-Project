@@ -17,7 +17,7 @@ function Slider() {
     },[])
     var useload=async()=>{
       //  var res=await axios.get('http://localhost:1000/admin/projectapi');
-      var res = await axios.get('http://localhost:5000/about_sliderapi')
+      var res = await axios.get('http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/about_sliderapi')
        daSet(res.data)
     }
     console.log(da);
@@ -28,7 +28,7 @@ function Slider() {
                     <>
       <div className="row slider-row">
         <div className="col-md-6 slider-image-column">
-          <img src={`http://localhost:5000/uploads/${item.about_slider_img}`} className="slider-image" alt="About" />
+            <img src={`http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/${item.about_slider_img}`} className="slider-image" alt="About" />
         </div>
 
        

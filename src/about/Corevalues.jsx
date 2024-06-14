@@ -16,7 +16,7 @@ function Corevalues() {
   }, []);
   var useload = async () => {
     //  var res=await axios.get('http://localhost:1000/admin/projectapi');
-    var res = await axios.get("http://localhost:5000/about_ourapi");
+    var res = await axios.get("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/about_ourapi");
     daSet(res.data);
   };
   console.log(da);

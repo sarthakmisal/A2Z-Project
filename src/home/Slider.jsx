@@ -5,7 +5,7 @@ import "./slider.css";
 function Slider() {
   const [Sliders, setSliders] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/get_sliders")
+    fetch("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/get_sliders")
       .then((res) => res.json())
       .then((data) => {
         setSliders(data);
@@ -71,7 +71,7 @@ function Slider() {
           Sliders.map((slider, index) => (
             <div className="item" key={index}>
               <img
-                src={"http://localhost:5000/uploads/" + slider.slider_image}
+                src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/" + slider.slider_image}
                 alt=""
               />
               <div className="content">
@@ -95,19 +95,19 @@ function Slider() {
       <div className="thumbnail">
         <div className="item">
           {/* <img
-            src={"http://localhost:5000/uploads/slider1.jpg"}
+            src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/slider1.jpg"}
             alt=""
             style={{ borderImage: "fill 0 linear-gradient(#0010,#000)" }}
           /> */}
         </div>
         {/* <div className="item">
-          <img src={"http://localhost:5000/uploads/slider2.jpg"} alt="" />
+          <img src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/slider2.jpg"} alt="" />
         </div>
         <div className="item">
-          <img src={"http://localhost:5000/uploads/slider3.jpg"} alt="" />
+          <img src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/slider3.jpg"} alt="" />
         </div>
         <div className="item">
-          <img src={"http://localhost:5000/uploads/slider4.jpg"} alt="" />
+          <img src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/slider4.jpg"} alt="" />
         </div> */}
       </div>
 

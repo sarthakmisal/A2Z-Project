@@ -16,7 +16,7 @@ function Missionvision() {
   }, []);
   var useload = async () => {
     // var res = await axios.get('http://localhost:5000/about_sliderapi')
-    var res = await axios.get("http://localhost:5000/miss_visapi");
+    var res = await axios.get("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/miss_visapi");
     daSet(res.data);
   };
   console.log(da);

@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 function Contact() {
     const [Contact, setContact] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/get_contacts").then(res=>res.json()).then(data=>setContact(data))
+      fetch("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/get_contacts").then(res=>res.json()).then(data=>setContact(data))
     })
     useEffect(() => {
       AOS.init({ duration: 1000 });

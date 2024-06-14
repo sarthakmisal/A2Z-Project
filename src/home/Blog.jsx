@@ -3,7 +3,7 @@ import "./blog.css";
 function Blog() {
   const [Blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/get_blogs")
+    fetch("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/get_blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   });
@@ -65,7 +65,7 @@ function Blog() {
                 />
                 <div class="carousel-caption  text-white">
                   <img
-                    src={"http://localhost:5000/uploads/" + element.image}
+                    src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/" + element.image}
                     width={200}
                     className="mb-5"
                     alt=""

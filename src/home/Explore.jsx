@@ -8,7 +8,7 @@ import "./Explore.css"; // Import the custom CSS file
 function Explore() {
   const [Cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/get_services")
+    fetch("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/get_services")
       .then((res) => res.json())
       .then((data) => setCards(data));
   });
@@ -42,7 +42,7 @@ function Explore() {
                   style={{ boxShadow: "1px solid white" }}
                 >
                   <img
-                    src={"http://localhost:5000/uploads/" + element.image}
+                    src={"http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/" + element.image}
                     alt=""
                     style={{ width: "100%", height: "200px" }}
                   />

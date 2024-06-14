@@ -19,9 +19,9 @@ function Client() {
   }, [])
   var useload = async () => {
     //  var res=await axios.get('http://localhost:1000/admin/projectapi');
-    var res = await axios.get('http://localhost:5000/ourClientapi')
+    var res = await axios.get('http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/ourClientapi')
     daSet(res.data)
-    var era = await axios.get('http://localhost:5000/aboutEndapi')
+    var era = await axios.get('http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/aboutEndapi')
     dsSet(era.data)
   }
   console.log(da);
@@ -52,7 +52,7 @@ function Client() {
                 {ds.length > 0 ? (
                   ds.map((item) => (
                     <>
-                      <img src={`http://localhost:5000/uploads/${item.img}`} alt="" className='rounded shadow' style={{ width: '100px' }} />
+                      <img src={`http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/uploads/${item.img}`} alt="" className='rounded shadow' style={{ width: '100px' }} />
                       {/* <img src="https://a2zithub.org/assets/rnempire.png" alt="" className='rounded shadow' style={{width:'100px'}} />
               <img src="https://a2zithub.org/assets/shingavi.jpg" alt="" className='rounded shadow' style={{width:'100px'}} />
               <img src="https://a2zithub.org/assets/global_logo2.jpeg" alt="" className='rounded shadow' style={{width:'100px'}} />

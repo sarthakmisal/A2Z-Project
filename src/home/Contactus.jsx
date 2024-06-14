@@ -35,7 +35,7 @@ import { useEffect } from 'react';
             <div className="col-md-6 p-5">
 
             <div className="contact-container mx-auto text-white">
-                <form action='http://localhost:5000/contact-us' method='post'>
+                <form action='http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/contact-us' method='post'>
                     <div className="form-group ">
                         <label htmlFor="name">Enter Your Name</label>
                         <input type="text" className="mt-2 w-100 p-2 rounded landmarkcard22" id="Enter Your Name" name="name" required placeholder='Name'/>
