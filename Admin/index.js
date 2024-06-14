@@ -63,7 +63,7 @@ app.post("/contact-us", async (req, res) => {
   await execute(
     `insert into queries(name,email,subject,message,status)values('${req.body.name}','${req.body.email}','${req.body.subject}','${req.body.message}','active')`
   );
-  res.redirect("http://localhost:3000/");
+  res.redirect("https://sarthakmisal.github.io/A2Z-Project/");
 });
 
 app.get("/queries", async (req, res) => {
