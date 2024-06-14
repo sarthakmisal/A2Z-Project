@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/A2Z-Project/static/css/main.9f5e3dd8.css",
-    "main.js": "/A2Z-Project/static/js/main.4e9dfc04.js",
+    "main.js": "/A2Z-Project/static/js/main.dbca675c.js",
     "static/js/453.cc543779.chunk.js": "/A2Z-Project/static/js/453.cc543779.chunk.js",
     "index.html": "/A2Z-Project/index.html",
     "main.9f5e3dd8.css.map": "/A2Z-Project/static/css/main.9f5e3dd8.css.map",
-    "main.4e9dfc04.js.map": "/A2Z-Project/static/js/main.4e9dfc04.js.map",
+    "main.dbca675c.js.map": "/A2Z-Project/static/js/main.dbca675c.js.map",
     "453.cc543779.chunk.js.map": "/A2Z-Project/static/js/453.cc543779.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f5e3dd8.css",
-    "static/js/main.4e9dfc04.js"
+    "static/js/main.dbca675c.js"
   ]
 }
